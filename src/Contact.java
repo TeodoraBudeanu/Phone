@@ -13,18 +13,6 @@ public class Contact {
         this.lastName = lastName;
     }
 
-    public String getPhoneNo() {
-        return phoneNo;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
     @Override
     public String toString() {
         return index + " " + phoneNo + " " + firstName + " " + lastName;

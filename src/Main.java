@@ -3,6 +3,7 @@ public class Main {
 
 //        Phone phone1 = new Samsung();
         Phone phone = new S6(123456789012345L); // IMEI code is an unique 15 digit number
+        phone.setBatteryLife(52);
         phone.setColor("red");
         phone.setMaterial("aluminium");
 
