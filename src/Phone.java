@@ -52,6 +52,12 @@ public abstract class Phone implements MobilePhone {
         myContacts.put(phoneNo, firstName + " " + lastName);
     }
 
+    public void duplicateContacts(ArrayList<Contact> contacts, Contact c){
+        if(contacts.contains(c)){
+            throw new DuplicateContactException("The contact already exists.");
+        }
+    }
+
     @Override
     public void listContacts() {
         for (Contact c : contacts) {
@@ -111,4 +117,6 @@ public abstract class Phone implements MobilePhone {
                 ", material='" + material + '\'' +
                 '}';
     }
+
+
 }
