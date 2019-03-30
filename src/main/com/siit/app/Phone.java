@@ -1,3 +1,7 @@
+package main.com.siit.app;
+
+import main.com.siit.exceptions.DuplicateContactException;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -14,36 +18,23 @@ public abstract class Phone implements MobilePhone {
     private String color = "Not set";
     private String material = "Not set";
 
-    public Phone(long imei) {
-        if (imei < Math.pow(10, 14) || imei > Math.pow(10, 15)) {
-            System.out.println("The IMEI code you have entered is invalid. Please try again.");
-        } else {
-            this.imei = imei;
-        }
+    public Phone(long imei, int batteryLife, String color, String material) {
+        this.imei = imei;
+        this.batteryLife = batteryLife;
+        this.color = color;
+        this.material = material;
     }
 
     public int getBatteryLife() {
         return batteryLife;
     }
 
-    public void setBatteryLife(int batteryLife) {
-        this.batteryLife = batteryLife;
-    }
-
     public String getColor() {
         return color;
     }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
-
     public String getMaterial() {
         return material;
-    }
-
-    public void setMaterial(String material) {
-        this.material = material;
     }
 
     @Override

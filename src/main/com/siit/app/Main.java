@@ -1,16 +1,16 @@
+package main.com.siit.app;
+
 public class Main {
     public static void main(String[] args) {
 
 //        Phone phone1 = new Samsung();
-        Phone phone = new S6(123456789012345L); // IMEI code is an unique 15 digit number
-        phone.setBatteryLife(52);
-        phone.setColor("red");
-        phone.setMaterial("aluminium");
+        Phone phone = new S6(123456789012345L, 52, "red", "aluminium"); // IMEI code is an unique 15 digit number
 
         System.out.println(phone + "\n");
 
         phone.addContact("1", "0745123444", "Ana", "Ionescu");
         phone.addContact("2", "0746321888", "Maria", "Popescu");
+        phone.addContact("3", "0746321888", "Maria", "Popescu");
         phone.listContacts();
 
         phone.sendMessage("0745123444", "This is a message sent to the first contact.");

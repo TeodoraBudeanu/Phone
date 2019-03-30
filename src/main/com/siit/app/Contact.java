@@ -1,3 +1,5 @@
+package main.com.siit.app;
+
 import java.util.Objects;
 
 public class Contact {

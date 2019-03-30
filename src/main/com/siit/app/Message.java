@@ -1,3 +1,5 @@
+package main.com.siit.app;
+
 public class Message {
 
     private String phoneNo;
